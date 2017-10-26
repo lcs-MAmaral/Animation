@@ -38,11 +38,11 @@ class Sketch : NSObject {
         canvas.fillColor = Color.black
         canvas.drawEllipse(centreX: offset, centreY: 50, width: 50, height: 50)
         canvas.fillColor = Color.yellow
-        canvas.drawEllipse(centreX: 250 - offset, centreY: 150, width: 50, height: 50)
+        canvas.drawEllipse(centreX: 500 - offset, centreY: 150, width: 50, height: 50)
         canvas.fillColor = Color.orange
         canvas.drawEllipse(centreX: offset, centreY: 250, width: 50, height: 50)
         canvas.fillColor = Color.red
-        canvas.drawEllipse(centreX: 250 - offset, centreY: 350, width: 50, height: 50)
+        canvas.drawEllipse(centreX: 500 - offset, centreY: 350, width: 50, height: 50)
         canvas.fillColor = Color.purple
         canvas.drawEllipse(centreX: offset, centreY: 450, width: 50, height: 50)
         
