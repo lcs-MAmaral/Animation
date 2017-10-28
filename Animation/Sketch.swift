@@ -19,9 +19,9 @@ class Sketch : NSObject {
         canvas = Canvas(width: 500, height: 500)
         
         // Set starting position
-        x = 250
+        x = random(from: 1, toButNotIncluding: 501)
         xd = 2
-        y = 250
+        y = random(from: 1, toButNotIncluding: 501)
         yd = 2
         
     }
