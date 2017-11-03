@@ -11,6 +11,10 @@ class Sketch : NSObject {
     var xd : Int
     var y : Int
     var yd : Int
+    var x2 : Int
+    var xd2 : Int
+    var y2 : Int
+    var yd2 : Int
     
     // This function runs once
     override init() {
@@ -23,6 +27,11 @@ class Sketch : NSObject {
         xd = 2
         y = random(from: 1, toButNotIncluding: 501)
         yd = 2
+        x2 = random(from: 1, toButNotIncluding: 501)
+        xd2 = 2
+        y2 = random(from: 1, toButNotIncluding: 501)
+        yd2 = 2
+        
         
     }
     
@@ -53,10 +62,32 @@ class Sketch : NSObject {
         if y < 0 {
             yd = 2
         }
+        
+        x2 += xd2
+        y2 += yd2
+        if x2 > 500 {
+            xd2 = -2
+        }
+        
+        
+        if x2 < 0 {
+            xd2 = 2
+        }
+        
+        if y2 > 500 {
+            yd2 = -2
+        }
+        
+        
+        if y2 < 0 {
+            yd2 = 2
+        }
      
         
-        canvas.fillColor = Color.black
-        canvas.drawEllipse(centreX: x, centreY: y, width: 50, height: 50)
+        canvas.fillColor = Color.white
+        canvas.drawEllipse(centreX: x2, centreY: 250, width: 300, height: 300, borderWidth: 10)
+        canvas.drawEllipse(centreX: x, centreY: y, width: 50, height: 50, borderWidth: 10)
+        canvas.drawLine(fromX: x, fromY: y, toX: x2, toY: 250)
         
     }
     
