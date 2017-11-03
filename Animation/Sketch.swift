@@ -34,10 +34,13 @@ class Sketch : NSObject {
        
         x += dx
         y = Int(a * Double(x) * (Double(x)-500))
+
         
         // Draw an ellipse in the middle of the canvas
-        canvas.drawEllipse(centreX: x, centreY: y, width: 50, height: 50)
-        
+         canvas.drawEllipse(centreX: x, centreY: y, width: 50, height: 50)
+         canvas.drawEllipse(centreX: x + 50, centreY: y, width: 50, height: 50)
+         canvas.drawEllipse(centreX: x + 100, centreY: y, width: 50, height: 50)
+         canvas.drawEllipse(centreX: x + 150, centreY: y, width: 50, height: 50)
     }
     
 }
