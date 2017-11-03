@@ -41,11 +41,11 @@ class Sketch : NSObject {
     // Runs in a loop, forever, to create the animated effect
     func draw() {
         
-        lineLength = sqrt(Double(Int(pow(Double(x) - Double(x2),2)) + Int(pow(Double(y)-250, 2))))
+        lineLength = sqrt(Double(Int(pow(Double(x) - Double(x2),2)) + Int(pow(Double(y)-Double(y2), 2))))
         print(lineLength)
-        canvas.fillColor = Color.white
-        canvas.drawRectangle(bottomLeftX: 0, bottomLeftY: 0, width: 500, height: 500)
-        
+//        canvas.fillColor = Color.white
+//        canvas.drawRectangle(bottomLeftX: 0, bottomLeftY: 0, width: 500, height: 500)
+//
         
      
         x += xd
@@ -89,12 +89,12 @@ class Sketch : NSObject {
         }
      
         
-        canvas.fillColor = Color.white
-        canvas.drawEllipse(centreX: x2, centreY: 250, width: 300, height: 300, borderWidth: 10)
-        canvas.drawEllipse(centreX: x, centreY: y, width: 50, height: 50, borderWidth: 10)
+//        canvas.fillColor = Color.white
+//        canvas.drawEllipse(centreX: x2, centreY: 250, width: 300, height: 300, borderWidth: 10)
+//        canvas.drawEllipse(centreX: x, centreY: y, width: 50, height: 50, borderWidth: 10)
        
         if lineLength < 150 {
-            canvas.drawLine(fromX: x, fromY: y, toX: x2, toY: 250)
+            canvas.drawLine(fromX: x, fromY: y, toX: x2, toY: y2)
         }
         
     }
