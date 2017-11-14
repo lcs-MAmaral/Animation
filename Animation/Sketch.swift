@@ -9,8 +9,8 @@ class Sketch : NSObject {
     // Position of circle
     var x : Int
     var y : Int
-    var dx : Int
-    var dy : Int
+    let dx : Int
+    let dy : Int
     var a : Double
     
     // This function runs once
